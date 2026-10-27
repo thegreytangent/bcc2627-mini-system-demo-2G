@@ -6,8 +6,13 @@ class StudentRepository extends DBRepository implements IStudentRepository {
   $query = self::query("SELECT * FROM student");
     
     $result = [];
-    foreach($query as $student) {
-        $result[]  = $student;
+    foreach($query as $s ) {
+        $result[]  = new Student ( 
+            $s['student_number'],
+            $s['firstname'],
+            $s['lastname'],
+            $s['dob']
+            );
     }
 
     return $result;

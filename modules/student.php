@@ -20,8 +20,7 @@
                                            <tr>
 
                                                   <th scope="col">Student Number</th>
-                                                  <th scope="col">Firstname</th>
-                                                  <th scope="col">Lastname</th>
+                                                  <th scope="col">Complete Name</th>
                                                   <th scope="col">Date of Birth</th>
                                                   <th scope="col">Action</th>
 
@@ -30,10 +29,9 @@
                                     <tbody>
                                           <?php foreach (StudentRepository::all() as $student): ?>
                                            <tr>
-                                                  <td><?php echo $student['student_number']; ?></td>
-                                                 <td><?php echo $student['firstname']; ?></td>
-                                                 <td><?php echo $student['lastname']; ?></td>
-                                                 <td><?php echo $student['dob']; ?></td>
+                                                  <td><?php echo $student->getStudentNumber(); ?></td>
+                                                 <td><?php echo $student->completName() ?></td>
+                                                 <td><?php echo $student->getDob(); ?></td>
                                                   <td>
                                                          <button class="btn btn-info"> 
                                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
