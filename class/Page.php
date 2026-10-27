@@ -1,7 +1,7 @@
 <?php 
 class Page{
     public static function display(string $page) {
-     switch ($_GET['page']) {
+     switch ( $page) {
             case 'dashboard':
                 include "modules/dashboard.php";
                 break;
