@@ -1,9 +1,9 @@
 <?php
-class StudentRepository extends DBRepository  {
+class StudentRepository extends DBRepository implements IStudentRepository {
 
   public static function all() : array {
-  
-    $query = self::query("SELECT * FROM student");
+    
+  $query = self::query("SELECT * FROM student");
     
     $result = [];
     foreach($query as $student) {

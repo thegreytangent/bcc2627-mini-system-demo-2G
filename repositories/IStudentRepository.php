@@ -1,4 +1,5 @@
-<?
+<?php
+
 interface IStudentRepository {
 
   public static function all() : array;
