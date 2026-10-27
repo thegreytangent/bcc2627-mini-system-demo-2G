@@ -28,11 +28,12 @@
                                            </tr>
                                     </thead>
                                     <tbody>
+                                          <?php foreach (StudentRepository::all() as $student): ?>
                                            <tr>
-                                                  <th scope="row">1</th>
-                                                  <td>Cell</td>
-                                                  <td>Cell</td>
-                                                  <td>Cell</td>
+                                                  <td><?php echo $student['student_number']; ?></td>
+                                                 <td><?php echo $student['firstname']; ?></td>
+                                                 <td><?php echo $student['lastname']; ?></td>
+                                                 <td><?php echo $student['dob']; ?></td>
                                                   <td>
                                                          <button class="btn btn-info"> 
                                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -49,6 +50,7 @@
 
                                                   </td>
                                            </tr>
+                                           <?php endforeach; ?>
                                     </tbody>
                              </table>
                       </div>
